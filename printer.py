@@ -11,7 +11,5 @@ class Printer:
 		return zlib.decompress(b64)
 		
 	def encode(self, txt):
-	    output = ""
-	    i = 0
-
-	    return base64.b64encode(txt)
+		compressed = zlib.compress(txt.encode())
+		return "0" + str(base64.b64encode(compressed) ) [2:-1]

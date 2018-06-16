@@ -3,3 +3,7 @@ GREENWIRE = 1
 
 INPUT = 0
 OUTPUT = 1
+
+INDEXTOKEY = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
+
+SIGNALNAMES = "ABCDEFGHIJKLMNOPQR"

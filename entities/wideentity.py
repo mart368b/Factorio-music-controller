@@ -14,6 +14,5 @@ class WideEntity(Entity):
 		id = '"entity_number": ' + str(self.id) + ','
 		name = '"name": "' + self.name + '",'
 		position = '"position": { "x": ' + str(self.x) + ', "y": ' + str(self.y) + "},"
-		direction = '"direction" ' + str(self.direction) + ','
-		print("Hello")
+		direction = '"direction": ' + str(self.direction) + ',' 
 		return id + name + position + direction

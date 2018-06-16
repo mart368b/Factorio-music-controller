@@ -20,19 +20,25 @@ class Circuit:
 			for c in self.connections[REDWIRE]:
 				output += "{"
 				output += '"entity_id": ' + str(c[0]) + ","
-				output += '"circuit_id": ' + str(c[1])
+				if (c[1] == 0):
+					output = output[-1]
+				else:
+					output += '"circuit_id": ' + str(c[1])
 				output += "},"
 
 			output = output[:-1] +  "]"
 		if (red):
 			output += ","
 		if (len(self.connections[GREENWIRE]) > 0):
-			output += '"red": ['
+			output += '"green": ['
 			
 			for c in self.connections[GREENWIRE]:
 				output += "{"
-				output += '"entity_id": ' + str(c[0])
-				output += '"circuit_id": '
+				output += '"entity_id": ' + str(c[0]) + ","
+				if (c[1] == 0):
+					output = output[-1]
+				else:
+					output += '"circuit_id": ' + str(c[1])
 				output += "},"
 
 			output = output[:-1] +  "]"
